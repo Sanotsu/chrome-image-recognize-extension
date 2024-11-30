@@ -1,0 +1,11 @@
+image-analyzer/
+├── manifest.json
+├── background.js
+├── analyzer.html
+├── analyzer.js
+├── styles.css
+├── options.html
+├── options.js
+├── lib/
+    ├── marked.min.js
+    └── github-markdown.css 

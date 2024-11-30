@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta http-equiv="Content-Security-Policy" content="trusted-types 'none';">
+  <title>图片内容分析器</title>
+  <script src="lib/marked.min.js"></script>
+  <link rel="stylesheet" href="lib/github-markdown.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="history-header">
+        <h3>历史记录</h3>
+        <button id="clearHistoryBtn" title="清空历史">🗑️</button>
+      </div>
+      <div class="history-list" id="historyList">
+        <!-- 历史记录将在这里动态添加 -->
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="input-section">
+        <div class="input-group">
+          <input type="text" id="imageUrl" placeholder="输入图片URL">
+          <div class="file-input-wrapper">
+            <button class="file-input-button">选择图片</button>
+            <input type="file" id="imageFile" accept="image/*">
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <div class="image-container">
+          <img id="selectedImage" src="" alt="预览图片">
+          <div class="image-placeholder">
+            请选择或输入图片URL
+          </div>
+        </div>
+        <div class="result-container">
+          <button id="analyzeBtn">识别图片</button>
+          <div id="analysisResult" class="markdown-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="analyzer.js"></script>
+</body>
+</html> 

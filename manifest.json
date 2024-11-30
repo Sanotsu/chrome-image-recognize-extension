@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "图片内容分析器",
+  "version": "1.0",
+  "description": "使用AI分析图片内容的Chrome扩展",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "图片内容分析器"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html"
+} 
